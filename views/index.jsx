@@ -4,10 +4,10 @@ const bread = require('../models/bread')
 
 function Index ({ breads }) {
     // .map
-    const breadDisplay = breads.map((bread, i) => {
+    const breadDisplay = breads.map((bread) => {
         return (
-            <li key={i}>
-                <a href={`/breads/${i}`}>
+            <li key={bread._id}>
+                <a href={`/breads/${bread._id}`}>
                     {bread.name}
                 </a>  
             </li>
